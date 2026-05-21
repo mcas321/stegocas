@@ -1,6 +1,13 @@
 # Stegocas
+<img width="1884" height="812" alt="image" src="https://github.com/user-attachments/assets/84be9eed-69ba-48c3-963a-bf0fa2722f69" />
+<img width="1034" height="366" alt="image" src="https://github.com/user-attachments/assets/004706c8-3254-4e13-8724-8d7b8cd76825" />
 
-JPEG-resistant steganography tool. Hides AES-256-GCM encrypted text inside JPEG images by modifying DCT coefficients in the luminance channel. Survives JPEG recompression at quality >= 65 (WhatsApp, Telegram).
+
+Stegocas is a steganography tool designed for the real world. It hides an AES-256-GCM encrypted message inside a JPEG and allows tou to share it publicly on Instagram, WhatsApp, or any platform that recompresses images without losing the hidden data.
+
+Most steganography tools break as soon as the image is recompressed. Stegocas uses DCT coefficient manipulation in the luma channel combined with Reed-Solomon error correction to survive JPEG quality reduction down to 80%, while tools like Steghide fail even at 95%.
+
+The tradeoff is capacity. Most of the image is used for redundancy, so messages are short but long enough for a link or a sentence.
 
 ## How it works
 
