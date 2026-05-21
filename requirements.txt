@@ -1,0 +1,30 @@
+# ══════════════════════════════════════════════════════════════════════════════
+# requirements.txt  —  StegoJPEG
+# ══════════════════════════════════════════════════════════════════════════════
+#
+# Instalación completa:
+#   pip install -r requirements.txt
+#
+# NOTA: tkinter está incluido en la instalación estándar de Python 3.x
+#       (no requiere pip install).
+#
+# Compilación a .exe (Windows):
+#   pip install pyinstaller
+#   pyinstaller --onefile --windowed --name StegoJPEG ^
+#       --hidden-import=scipy.fftpack ^
+#       --hidden-import=reedsolo ^
+#       main_gui.py
+# ══════════════════════════════════════════════════════════════════════════════
+
+# Procesamiento de imagen y operaciones matriciales
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Transformada Discreta del Coseno (DCT / IDCT)
+scipy>=1.11.0
+
+# Cifrado AES-256-GCM + derivación de clave PBKDF2-HMAC-SHA256
+cryptography>=41.0.0
+
+# Corrección de errores Reed-Solomon
+reedsolo>=1.7.0
